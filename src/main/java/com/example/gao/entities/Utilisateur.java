@@ -25,6 +25,7 @@ public class Utilisateur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String login;
+    private String matricule;
     private String nom;
     private String prenom;
     private String email;
@@ -41,8 +42,9 @@ public class Utilisateur {
     public Utilisateur() {
     }
 
-    public Utilisateur(String login, String nom, String prenom, String email, String password, Date datenais, String telephone, String profil, Boolean etat, Date dateCreate, Date dateUpdate, String status) {
+    public Utilisateur(String login, String matricule, String nom, String prenom, String email, String password, Date datenais, String telephone, String profil, Boolean etat, Date dateCreate, Date dateUpdate, String status) {
         this.login = login;
+        this.matricule = matricule;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
@@ -55,6 +57,8 @@ public class Utilisateur {
         this.dateUpdate = dateUpdate;
         this.status = status;
     }
+
+   
 
    
 
@@ -73,6 +77,15 @@ public class Utilisateur {
     public void setLogin(String login) {
         this.login = login;
     }
+
+    public String getMatricule() {
+        return matricule;
+    }
+
+    public void setMatricule(String matricule) {
+        this.matricule = matricule;
+    }
+    
 
     public String getNom() {
         return nom;

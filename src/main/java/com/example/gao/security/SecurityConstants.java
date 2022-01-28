@@ -34,6 +34,7 @@ public class SecurityConstants {
     "/api/oneReservation/{id}",
     "/api/deleteReservation/{id}", 
     "/api/listOrdinateur/{status}",
+    "/api/upload",
     "/register"
   };
 }

@@ -6,10 +6,7 @@
 package com.example.gao.entities;
 
 import java.util.Date;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -36,11 +33,13 @@ public class Reservation {
     private Ordinateur ordinateur;
     @ManyToOne
     private Utilisateur utilisateur;
+    @ManyToOne
+    private Utilisateur userCreate;
 
     public Reservation() {
     }
 
-    public Reservation(Date dateDebutReservation, Date dateFinReservation, Date dateCreate, Date dateUpdate, String status, boolean etat, Ordinateur ordinateur, Utilisateur utilisateur) {
+    public Reservation(Date dateDebutReservation, Date dateFinReservation, Date dateCreate, Date dateUpdate, String status, boolean etat, Ordinateur ordinateur, Utilisateur utilisateur, Utilisateur userCreate) {
         this.dateDebutReservation = dateDebutReservation;
         this.dateFinReservation = dateFinReservation;
         this.dateCreate = dateCreate;
@@ -49,7 +48,10 @@ public class Reservation {
         this.etat = etat;
         this.ordinateur = ordinateur;
         this.utilisateur = utilisateur;
+        this.userCreate = userCreate;
     }
+
+    
 
     public boolean isEtat() {
         return etat;
@@ -126,6 +128,13 @@ public class Reservation {
         this.status = status;
     }
 
-      
-    
+    public Utilisateur getUserCreate() {
+        return userCreate;
+    }
+
+    public void setUserCreate(Utilisateur userCreate) {
+        this.userCreate = userCreate;
+    }
+
+         
 }

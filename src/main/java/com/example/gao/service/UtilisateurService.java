@@ -9,6 +9,7 @@ package com.example.gao.service;
 import com.example.gao.entities.Utilisateur;
 import com.example.gao.utils.ResponseWrapper;
 import java.util.List;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  *
@@ -27,6 +28,9 @@ public interface UtilisateurService {
     boolean existsById(String login) ;
     List<Utilisateur> findAllByEtat(boolean etat) ;
     ResponseWrapper login(String login,String password);
-    
+    public Utilisateur findbylogin(String login,String password);
+    public void savefile(MultipartFile file);
+     public void savefileExcel(List<Utilisateur> listeusers) ;
+    public int saveExcelData(List<Utilisateur> invoices);
 
 }

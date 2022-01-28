@@ -19,6 +19,9 @@ public interface UtilisateurRepository extends JpaRepository<Utilisateur, Long>{
      public Utilisateur findOneByEtat(Boolean etat);
      @Query("SELECT o FROM Utilisateur o where o.login=:login and o.password=:password and o.etat=1")
     public Utilisateur findOneByloginbypassword(@Param("login") String login,@Param("password") String password);
+     @Query("SELECT o FROM Utilisateur o where o.login=:login and o.etat=1")
+    public Utilisateur findOneBylogin(@Param("login") String login);
 public List<Utilisateur> findAllByEtat(boolean etat);
 public Utilisateur findByIdAndEtat(Long id,boolean etat);
+public Utilisateur findByLogin(String login);
 }
