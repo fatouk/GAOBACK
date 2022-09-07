@@ -17,6 +17,10 @@
 		<java.version>11</java.version>
 		<spring-native.version>0.10.0-SNAPSHOT</spring-native.version>
 	</properties>
+	<properties>
+ 	 <sonar.organization>fatouk</sonar.organization>
+  	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
