@@ -13,6 +13,12 @@ import java.util.List;
  * @author fakaloga
  */
 public interface OrdinateurService {
+    
+    /**
+    *Permet d'enregistrer un oridinateur.
+    * 
+    *@param  ordinateur:objet ordinateur doit etre un parametre.
+    */
     Ordinateur saveOrdinateur(Ordinateur ordinateur);
     Ordinateur updateOrdinateur(Ordinateur ordinateur);
     void deleteOrdinateur(Ordinateur ordinateur);
